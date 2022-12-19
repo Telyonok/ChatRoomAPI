@@ -20,8 +20,16 @@ namespace ChatRoomWeb.Controllers
         [AllowAnonymous]
         public async Task<TokenResponse> RequestToken(TokenRequest tokenRequest)
         {
-            //var tokenRequest = new TokenRequest() { Email = email, Password = password };
             var token = await _authenticationService.RequestTokenAsync(tokenRequest);
+            return token;
+        }
+
+        [HttpPost]
+        [Route("/api/refreshToken")]
+        [AllowAnonymous]
+        public async Task<TokenResponse> RefreshToken(RefreshTokenRequest refreshTokenRequest)
+        {
+            var token = await _authenticationService.RefreshTokenAsync(refreshTokenRequest);
             return token;
         }
     }

@@ -1,8 +1,13 @@
-﻿using ChatRoomWeb.Data;
+﻿using ChatRoomAPI.Data;
+using ChatRoomWeb.Data;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace ChatRoomAPI.Models
 {
+    [PrimaryKey(nameof(Id))]
+    [Index(nameof(Email))]
     public class User
     {
         public User(string username, string email, string passwordHash)

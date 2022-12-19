@@ -6,5 +6,6 @@ namespace ChatRoomAPI.Services
     {
         Task InsertUserAsync(User user);
         Task<User> LoginAsync(TokenRequest login);
+        Task<User> GetUserFromRefreshTokenAsync(string email, string refreshToken);
     }
 }

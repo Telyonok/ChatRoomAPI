@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ChatRoomAPI"
   ],
-  "SelectedNode": "\\C:\\Users\\life2\\Source\\Repos\\ChatRoomAPIGit",
+  "SelectedNode": "\\ChatRoomAPI\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

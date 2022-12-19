@@ -1,4 +1,5 @@
 using ChatRoomAPI;
+using ChatRoomAPI.Data;
 using ChatRoomAPI.Models;
 using ChatRoomAPI.Repositories;
 using ChatRoomAPI.Services;
@@ -27,7 +28,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuerSigningKey = true,
             ValidIssuer = "localhost:7158",
             ValidAudience = "localhost:7158",
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(cryptoSettingsSection["JwtSigningKey"]))
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(cryptoSettingsSection["JwtSigningKey"])),
+            ClockSkew = TimeSpan.Zero
         };
     });
 
@@ -49,6 +51,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<IUsersService, UsersService>();
 builder.Services.AddSingleton<IUsersRepository, UsersRepository>();
 builder.Services.AddSingleton<IAuthenticationService, AuthenticationService>();
+builder.Services.AddSingleton<ITokenRepository, TokenRepository>();
+
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("DefaultConnection")

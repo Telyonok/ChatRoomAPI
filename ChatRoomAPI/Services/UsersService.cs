@@ -19,7 +19,10 @@ namespace ChatRoomAPI.Services
 
         public async Task InsertUserAsync(User user)
         {
-            await _usersRepository.InsertUserAsync(user);
+            var userId = await _usersRepository.InsertUserAsync(user);
+            // send email
+            var validationData = Guid.NewGuid();
+            await _usersRepository.UpdateUserValidationData(user.Id, validationData);
         }
 
         public async Task<User> LoginAsync(TokenRequest login)

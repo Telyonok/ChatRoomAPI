@@ -1,5 +1,6 @@
 using ChatRoomAPI;
 using ChatRoomAPI.Data;
+using ChatRoomAPI.Middleware;
 using ChatRoomAPI.Models;
 using ChatRoomAPI.Repositories;
 using ChatRoomAPI.Services;
@@ -16,6 +17,9 @@ builder.Host.UseSerilog();
 
 var cryptoSettingsSection = builder.Configuration.GetSection("CryptoSettings");
 builder.Services.Configure<CryptoSettings>(cryptoSettingsSection);
+
+var adminSettingsSection = builder.Configuration.GetSection("AdminSettings");
+builder.Services.Configure<AdminSettings>(adminSettingsSection);
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -43,7 +47,6 @@ Log.Logger = new LoggerConfiguration()
 
 //var dbSettingsSection = builder.Configuration.GetSection("DatabaseSettings");
 //builder.Services.Configure<Dat>
-
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
@@ -73,6 +76,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseApiKey();
 
 app.UseAuthentication();
 app.UseAuthorization();

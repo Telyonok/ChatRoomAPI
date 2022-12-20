@@ -29,13 +29,30 @@ namespace ChatRoomAPI.Repositories
             }
         }
 
-        public async Task InsertUserAsync(User user)
+        public async Task<int> InsertUserAsync(User user)
         {    
             using (var scope = scopeFactory.CreateScope())
             {
                 var _db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
                 await _db.Users.AddAsync(user);
                 await _db.SaveChangesAsync();
+                logger.LogDebug($"User {user.Username} with:\nid {user.Id}\nemail {user.Email}\ncreation date {user.CreationDate}\nwas added to database.\n");
+                return user.Id;
+            }
+        }
+
+        public async Task UpdateUserValidationData(int userId, Guid verificationData)
+        {
+            using (var scope = scopeFactory.CreateScope())
+            {
+                var _db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+                var user = _db.Users.Where(u => u.Id == userId).FirstOrDefault();
+                if (user != null)
+                {
+                    user.VerificationData = verificationData;
+                    _db.Users.Update(user);
+                    await _db.SaveChangesAsync();
+                }
                 logger.LogDebug($"User {user.Username} with:\nid {user.Id}\nemail {user.Email}\ncreation date {user.CreationDate}\nwas added to database.\n");
             }
         }

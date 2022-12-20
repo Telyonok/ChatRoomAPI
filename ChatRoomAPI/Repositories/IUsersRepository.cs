@@ -4,7 +4,8 @@ namespace ChatRoomAPI.Repositories
 {
     public interface IUsersRepository
     {
-        Task InsertUserAsync(User user);
+        Task<int> InsertUserAsync(User user);
         Task<User> GetUserByEmailAsync(string email);
+        Task UpdateUserValidationData(int userId, Guid validationData);
     }
 }

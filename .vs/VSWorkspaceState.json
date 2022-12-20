@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ChatRoomAPI"
+    "\\ChatRoomAPI",
+    "\\ChatRoomAPI\\Controllers"
   ],
-  "SelectedNode": "\\ChatRoomAPI\\Program.cs",
+  "SelectedNode": "\\ChatRoomAPI\\Controllers\\AuthentificationController.cs",
   "PreviewInSolutionExplorer": false
 }

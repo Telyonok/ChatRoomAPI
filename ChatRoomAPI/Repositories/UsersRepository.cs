@@ -29,6 +29,26 @@ namespace ChatRoomAPI.Repositories
             }
         }
 
+        public async Task<int> GetUserIdByVerification(string verificationData)
+        {
+            using (var scope = scopeFactory.CreateScope())
+            {
+                var _db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+                var user = _db.Users.Where(x => x.VerificationData.ToString() == verificationData).FirstOrDefault();
+                if (user == null)
+                {
+                    return -1;
+                }
+
+                user.IsConfirmed = true;
+                user.VerificationData = null;
+                _db.Update(user);
+                await _db.SaveChangesAsync();
+                return user.Id;
+            }
+        }
+
         public async Task<int> InsertUserAsync(User user)
         {    
             using (var scope = scopeFactory.CreateScope())

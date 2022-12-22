@@ -28,6 +28,6 @@ namespace ChatRoomAPI.Models
         public string PasswordHash { get; set; }
         public bool IsConfirmed { get; set; }
         public DateTime CreationDate { get; set; }
-        public Guid VerificationData { get; set; }
+        public Guid? VerificationData { get; set; }
     }
 }

@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\ChatRoomAPI",
-    "\\ChatRoomAPI\\Controllers"
+    "\\ChatRoomAPI\\Controllers",
+    "\\ChatRoomAPI\\Middleware",
+    "\\ChatRoomAPI\\Services"
   ],
-  "SelectedNode": "\\ChatRoomAPI\\Controllers\\AuthentificationController.cs",
+  "SelectedNode": "\\ChatRoomAPI\\Services\\EmailService.cs",
   "PreviewInSolutionExplorer": false
 }

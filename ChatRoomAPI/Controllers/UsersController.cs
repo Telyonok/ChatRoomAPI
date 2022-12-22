@@ -23,5 +23,24 @@ namespace ChatRoomAPI.Controllers
             await _usersService.InsertUserAsync(user);
             return NoContent();
         }
+
+        [HttpGet]
+        [Route("/api/VerifyEmail/{verificationData}")]
+        public async Task<IActionResult> VerifyEmail(string verificationData)
+        {
+            var userId = await _usersService.GetUserIdByVerification(verificationData);
+            
+            var verifyEmailResponse = new VerifyEmailResponse
+            {
+                UserId = userId
+            };
+
+            if (userId < 0)
+            {
+                return NotFound(verifyEmailResponse);
+            }
+            
+            return Ok(verifyEmailResponse);
+        }
     }
 }

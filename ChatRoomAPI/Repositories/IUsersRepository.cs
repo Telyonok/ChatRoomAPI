@@ -7,5 +7,6 @@ namespace ChatRoomAPI.Repositories
         Task<int> InsertUserAsync(User user);
         Task<User> GetUserByEmailAsync(string email);
         Task UpdateUserValidationData(int userId, Guid validationData);
+        Task<int> GetUserIdByVerification(string verificationData);
     }
 }

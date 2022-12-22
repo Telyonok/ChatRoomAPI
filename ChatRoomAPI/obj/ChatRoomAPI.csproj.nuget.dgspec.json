@@ -44,6 +44,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "FluentEmail.Mailgun": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[7.0.1, )"
@@ -68,7 +72,7 @@
             },
             "Serilog.AspNetCore": {
               "target": "Package",
-              "version": "[6.1.0, )"
+              "version": "[6.1.1-dev-00293, )"
             },
             "Serilog.Sinks.Debug": {
               "target": "Package",

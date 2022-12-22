@@ -1,6 +1,7 @@
 ﻿using ChatRoomAPI.Data;
 using ChatRoomAPI.Models;
 using ChatRoomAPI.Repositories;
+using Microsoft.Extensions.Options;
 using Serilog;
 using System.Security.Authentication;
 
@@ -10,11 +11,13 @@ namespace ChatRoomAPI.Services
     {
         private readonly IUsersRepository _usersRepository;
         private readonly ITokenRepository _tokenRepository;
+        private readonly IEmailService _emailService;
 
-        public UsersService(IUsersRepository usersRepository, ITokenRepository tokenRepository)
+        public UsersService(IUsersRepository usersRepository, ITokenRepository tokenRepository, IEmailService emailService)
         {
             _usersRepository = usersRepository;
             _tokenRepository = tokenRepository;
+            _emailService = emailService;
         }
 
         public async Task InsertUserAsync(User user)
@@ -23,6 +26,7 @@ namespace ChatRoomAPI.Services
             // send email
             var validationData = Guid.NewGuid();
             await _usersRepository.UpdateUserValidationData(user.Id, validationData);
+            //await _emailService.SendConfirmationEmailAsync(user);
         }
 
         public async Task<User> LoginAsync(TokenRequest login)
@@ -56,6 +60,12 @@ namespace ChatRoomAPI.Services
             }
 
             return null;
+        }
+
+        public async Task<int> GetUserIdByVerification(string verificationData)
+        {
+            var userId = await _usersRepository.GetUserIdByVerification(verificationData);
+            return userId;
         }
     }
 }

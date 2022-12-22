@@ -170,3 +170,6 @@ C:\Users\life2\Source\Repos\ChatRoomAPIGit\ChatRoomAPI\obj\Debug\net7.0\refint\C
 C:\Users\life2\Source\Repos\ChatRoomAPIGit\ChatRoomAPI\obj\Debug\net7.0\ChatRoomAPI.pdb
 C:\Users\life2\Source\Repos\ChatRoomAPIGit\ChatRoomAPI\obj\Debug\net7.0\ChatRoomAPI.genruntimeconfig.cache
 C:\Users\life2\Source\Repos\ChatRoomAPIGit\ChatRoomAPI\obj\Debug\net7.0\ref\ChatRoomAPI.dll
+C:\Users\life2\Source\Repos\ChatRoomAPIGit\ChatRoomAPI\bin\Debug\net7.0\FluentEmail.Core.dll
+C:\Users\life2\Source\Repos\ChatRoomAPIGit\ChatRoomAPI\bin\Debug\net7.0\FluentEmail.Mailgun.dll
+C:\Users\life2\Source\Repos\ChatRoomAPIGit\ChatRoomAPI\bin\Debug\net7.0\Newtonsoft.Json.dll

@@ -8,12 +8,13 @@
     ".NETCoreApp,Version=v7.0": {
       "ChatRoomAPI/1.0.0": {
         "dependencies": {
+          "FluentEmail.Mailgun": "3.0.2",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.1",
           "Microsoft.EntityFrameworkCore": "7.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.1",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.1",
           "Serilog": "2.12.1-dev-01635",
-          "Serilog.AspNetCore": "6.1.0",
+          "Serilog.AspNetCore": "6.1.1-dev-00293",
           "Serilog.Sinks.Debug": "2.0.0",
           "Serilog.Sinks.File": "5.0.1-dev-00947",
           "System.IdentityModel.Tokens.Jwt": "6.25.1"
@@ -53,6 +54,29 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.6.0.0",
             "fileVersion": "1.600.22.20503"
+          }
+        }
+      },
+      "FluentEmail.Core/3.0.2": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentEmail.Core.dll": {
+            "assemblyVersion": "3.0.2.0",
+            "fileVersion": "3.0.2.0"
+          }
+        }
+      },
+      "FluentEmail.Mailgun/3.0.2": {
+        "dependencies": {
+          "FluentEmail.Core": "3.0.2",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentEmail.Mailgun.dll": {
+            "assemblyVersion": "3.0.2.0",
+            "fileVersion": "3.0.2.0"
           }
         }
       },
@@ -291,14 +315,6 @@
           "Microsoft.Extensions.Primitives": "7.0.0"
         }
       },
-      "Microsoft.Extensions.Options.ConfigurationExtensions/2.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
-          "Microsoft.Extensions.Configuration.Binder": "2.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
-          "Microsoft.Extensions.Options": "7.0.0"
-        }
-      },
       "Microsoft.Extensions.Primitives/7.0.0": {},
       "Microsoft.Identity.Client/4.45.0": {
         "dependencies": {
@@ -438,6 +454,14 @@
           }
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
       "Serilog/2.12.1-dev-01635": {
         "runtime": {
           "lib/net6.0/Serilog.dll": {
@@ -446,14 +470,14 @@
           }
         }
       },
-      "Serilog.AspNetCore/6.1.0": {
+      "Serilog.AspNetCore/6.1.1-dev-00293": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "Microsoft.Extensions.Logging": "7.0.0",
           "Serilog": "2.12.1-dev-01635",
           "Serilog.Extensions.Hosting": "5.0.1",
           "Serilog.Formatting.Compact": "1.1.0",
-          "Serilog.Settings.Configuration": "3.3.0",
+          "Serilog.Settings.Configuration": "3.4.0",
           "Serilog.Sinks.Console": "4.0.1",
           "Serilog.Sinks.Debug": "2.0.0",
           "Serilog.Sinks.File": "5.0.1-dev-00947"
@@ -461,7 +485,7 @@
         "runtime": {
           "lib/net5.0/Serilog.AspNetCore.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "6.1.0.0"
+            "fileVersion": "6.1.1.0"
           }
         }
       },
@@ -503,16 +527,16 @@
           }
         }
       },
-      "Serilog.Settings.Configuration/3.3.0": {
+      "Serilog.Settings.Configuration/3.4.0": {
         "dependencies": {
+          "Microsoft.Extensions.Configuration.Binder": "2.0.0",
           "Microsoft.Extensions.DependencyModel": "7.0.0",
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.0.0",
           "Serilog": "2.12.1-dev-01635"
         },
         "runtime": {
           "lib/netstandard2.0/Serilog.Settings.Configuration.dll": {
-            "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.3.0.0"
+            "assemblyVersion": "3.4.0.0",
+            "fileVersion": "3.4.0.0"
           }
         }
       },
@@ -796,6 +820,20 @@
       "path": "azure.identity/1.6.0",
       "hashPath": "azure.identity.1.6.0.nupkg.sha512"
     },
+    "FluentEmail.Core/3.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uQFFbJgMhhCFUti7pfMi429fMNi7fLGMj+7uDtD7POlQzLxlhXJ6tmt4Y1SI51sZsA36GO5b7+o29eY/dKiICQ==",
+      "path": "fluentemail.core/3.0.2",
+      "hashPath": "fluentemail.core.3.0.2.nupkg.sha512"
+    },
+    "FluentEmail.Mailgun/3.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9nC9jhlNWQgqhWFpi1h4KYDqP26adAMrGxulP/jVlDa1jy0lyk5Xanu+apXR3YwfVEkXW1QNzlSEjTu94KJ+Ew==",
+      "path": "fluentemail.mailgun/3.0.2",
+      "hashPath": "fluentemail.mailgun.3.0.2.nupkg.sha512"
+    },
     "Humanizer.Core/2.14.1": {
       "type": "package",
       "serviceable": true,
@@ -978,13 +1016,6 @@
       "path": "microsoft.extensions.options/7.0.0",
       "hashPath": "microsoft.extensions.options.7.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Options.ConfigurationExtensions/2.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Y/lGICwO27fCkQRK3tZseVzFjZaxfGmui990E67sB4MuiPzdJHnJDS/BeYWrHShSSBgCl4KyKRx4ux686fftPg==",
-      "path": "microsoft.extensions.options.configurationextensions/2.0.0",
-      "hashPath": "microsoft.extensions.options.configurationextensions.2.0.0.nupkg.sha512"
-    },
     "Microsoft.Extensions.Primitives/7.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1090,6 +1121,13 @@
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
     },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
     "Serilog/2.12.1-dev-01635": {
       "type": "package",
       "serviceable": true,
@@ -1097,12 +1135,12 @@
       "path": "serilog/2.12.1-dev-01635",
       "hashPath": "serilog.2.12.1-dev-01635.nupkg.sha512"
     },
-    "Serilog.AspNetCore/6.1.0": {
+    "Serilog.AspNetCore/6.1.1-dev-00293": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-iMwFUJDN+/yWIPz4TKCliagJ1Yn//SceCYCzgdPwe/ECYUwb5/WUL8cTzRKV+tFwxGjLEV/xpm0GupS5RwbhSQ==",
-      "path": "serilog.aspnetcore/6.1.0",
-      "hashPath": "serilog.aspnetcore.6.1.0.nupkg.sha512"
+      "sha512": "sha512-orVet9HoEM1ilsybLXNqeKRIsULGSybT7uTdo2w6jM81KDfDE8V8gMlPdy0pOg5XPJvmYYxKjtyUW2vHazRgxQ==",
+      "path": "serilog.aspnetcore/6.1.1-dev-00293",
+      "hashPath": "serilog.aspnetcore.6.1.1-dev-00293.nupkg.sha512"
     },
     "Serilog.Extensions.Hosting/5.0.1": {
       "type": "package",
@@ -1125,12 +1163,12 @@
       "path": "serilog.formatting.compact/1.1.0",
       "hashPath": "serilog.formatting.compact.1.1.0.nupkg.sha512"
     },
-    "Serilog.Settings.Configuration/3.3.0": {
+    "Serilog.Settings.Configuration/3.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7GNudISZwqaT902hqEL2OFGTZeUFWfnrNLupJkOqeF41AR3GjcxX+Hwb30xb8gG2/CDXsCMVfF8o0+8KY0fJNg==",
-      "path": "serilog.settings.configuration/3.3.0",
-      "hashPath": "serilog.settings.configuration.3.3.0.nupkg.sha512"
+      "sha512": "sha512-ULloXSiapTb3zOWodC0G4WRDQzA5RjMEfZNZzOZpH8kC3t/lrISLblklIpKC44CX0sMDF40MnJwTIQ3pFQFs4g==",
+      "path": "serilog.settings.configuration/3.4.0",
+      "hashPath": "serilog.settings.configuration.3.4.0.nupkg.sha512"
     },
     "Serilog.Sinks.Console/4.0.1": {
       "type": "package",

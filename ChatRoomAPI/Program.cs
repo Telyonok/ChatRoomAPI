@@ -21,6 +21,9 @@ builder.Services.Configure<CryptoSettings>(cryptoSettingsSection);
 var adminSettingsSection = builder.Configuration.GetSection("AdminSettings");
 builder.Services.Configure<AdminSettings>(adminSettingsSection);
 
+var mailGunSettingsSection = builder.Configuration.GetSection("MailGunSettings");
+builder.Services.Configure<MailGunSettings>(mailGunSettingsSection);
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -55,6 +58,7 @@ builder.Services.AddSingleton<IUsersService, UsersService>();
 builder.Services.AddSingleton<IUsersRepository, UsersRepository>();
 builder.Services.AddSingleton<IAuthenticationService, AuthenticationService>();
 builder.Services.AddSingleton<ITokenRepository, TokenRepository>();
+builder.Services.AddSingleton<IEmailService, EmailService>();
 
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(

@@ -6,6 +6,6 @@
     "\\ChatRoomAPI\\Middleware",
     "\\ChatRoomAPI\\Services"
   ],
-  "SelectedNode": "\\ChatRoomAPI\\Services\\EmailService.cs",
+  "SelectedNode": "\\ChatRoomAPI\\Services\\UsersService.cs",
   "PreviewInSolutionExplorer": false
 }

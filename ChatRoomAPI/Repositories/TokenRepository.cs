@@ -32,20 +32,17 @@ namespace ChatRoomAPI.Repositories
             }
         }
 
-        public Token GetToken(string email, string refreshToken)
+        public Token GetToken(string refreshToken)
         {
             using (var scope = scopeFactory.CreateScope())
             {
                 var _db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
                 var token = _db.Tokens
-                    .Where(t => t.UserEmail == email)
+                    .Where(t => t.RefreshToken == refreshToken)
                     .FirstOrDefault();
                 if (token != null) 
                 {
-                    if (token.RefreshToken == refreshToken)
-                    {
-                        return token;
-                    }
+                    return token;
                 }
 
                 return null;

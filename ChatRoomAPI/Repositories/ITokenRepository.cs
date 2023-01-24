@@ -6,6 +6,6 @@ namespace ChatRoomAPI.Repositories
     public interface ITokenRepository
     {
         void AddToken(Token token);
-        Token GetToken(string email, string refreshToken);
+        Token GetToken(string refreshToken);
     }
 }

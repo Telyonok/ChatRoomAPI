@@ -1,0 +1,154 @@
+2022-12-29 11:26:52.004 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 11:27:52.548 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 11:29:04.100 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 11:29:13.719 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 11:29:17.312 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 11:33:01.410 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 11:33:03.193 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 11:33:06.629 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 11:33:09.562 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 11:33:38.730 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 11:33:51.536 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 11:34:12.331 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 11:42:55.886 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 11:43:19.681 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 11:46:20.218 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 11:46:30.204 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 12:32:30.355 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 12:44:12.701 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 12:47:25.204 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: SecurityToken has Expired
+   at ChatRoomWeb.Services.AuthenticationService.RefreshTokenAsync(RefreshTokenRequest refreshTokenRequest) in C:\Users\life2\source\repos\ChatRoomAPIGit\ChatRoomAPI\Services\AuthenticationService.cs:line 41
+   at ChatRoomWeb.Controllers.AuthenticationController.RefreshTokenAsync(RefreshTokenRequest refreshTokenRequest) in C:\Users\life2\source\repos\ChatRoomAPIGit\ChatRoomAPI\Controllers\AuthentificationController.cs:line 35
+   at lambda_method4(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ChatRoomAPI.Middleware.UseApiKey.InvokeAsync(HttpContext context) in C:\Users\life2\source\repos\ChatRoomAPIGit\ChatRoomAPI\Middleware\UseApiKey.cs:line 39
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2022-12-29 12:47:46.573 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 12:49:17.701 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 13:02:38.244 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: SecurityToken has Expired
+   at ChatRoomWeb.Services.AuthenticationService.RefreshTokenAsync(RefreshTokenRequest refreshTokenRequest) in C:\Users\life2\source\repos\ChatRoomAPIGit\ChatRoomAPI\Services\AuthenticationService.cs:line 41
+   at ChatRoomWeb.Controllers.AuthenticationController.RefreshTokenAsync(RefreshTokenRequest refreshTokenRequest) in C:\Users\life2\source\repos\ChatRoomAPIGit\ChatRoomAPI\Controllers\AuthentificationController.cs:line 35
+   at lambda_method4(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ChatRoomAPI.Middleware.UseApiKey.InvokeAsync(HttpContext context) in C:\Users\life2\source\repos\ChatRoomAPIGit\ChatRoomAPI\Middleware\UseApiKey.cs:line 39
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2022-12-29 13:02:39.628 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 13:02:42.201 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 13:43:49.135 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 13:43:54.905 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 13:44:00.690 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 14:15:02.738 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 14:15:21.044 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 14:15:26.638 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: SecurityToken has Expired
+   at ChatRoomWeb.Services.AuthenticationService.RefreshTokenAsync(RefreshTokenRequest refreshTokenRequest) in C:\Users\life2\source\repos\ChatRoomAPIGit\ChatRoomAPI\Services\AuthenticationService.cs:line 41
+   at ChatRoomWeb.Controllers.AuthenticationController.RefreshTokenAsync(RefreshTokenRequest refreshTokenRequest) in C:\Users\life2\source\repos\ChatRoomAPIGit\ChatRoomAPI\Controllers\AuthentificationController.cs:line 35
+   at lambda_method4(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ChatRoomAPI.Middleware.UseApiKey.InvokeAsync(HttpContext context) in C:\Users\life2\source\repos\ChatRoomAPIGit\ChatRoomAPI\Middleware\UseApiKey.cs:line 39
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2022-12-29 14:15:29.404 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 14:16:01.258 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 14:20:23.211 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 14:20:34.090 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 14:24:16.540 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 14:25:04.569 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 14:32:50.662 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 14:37:46.925 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 14:37:54.885 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 14:53:46.532 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 14:53:50.912 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 14:54:08.596 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 14:54:37.781 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+
+2022-12-29 14:55:15.610 +03:00 [DBG] Token for email life270304@mail.ru was updated.
+

@@ -35,7 +35,7 @@ namespace ChatRoomAPI.Controllers
         [HttpGet]
         [Route("/api/protectedping")]
         [Authorize]
-        public IActionResult GetProtectedPing()
+        public async Task<IActionResult> GetProtectedPing()
         {
             return Ok(new { Response = "Protected Pong" });
         }

@@ -1,4 +1,5 @@
 ﻿using ChatRoomAPI.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ChatRoomAPI.Services
 {
@@ -6,7 +7,9 @@ namespace ChatRoomAPI.Services
     {
         Task InsertUserAsync(User user);
         Task<User> LoginAsync(TokenRequest login);
-        Task<User> GetUserFromRefreshTokenAsync(string email, string refreshToken);
-        Task<int> GetUserIdByVerification(string verificationData);
+        Task<User> GetUserFromRefreshTokenAsync(string refreshToken);
+        Task<int> GetUserIdByVerificationAsync(string verificationData);
+        Task<bool> IsUniqueEmailAsync(string email);
+        Task<bool> IsUniqueUsernameAsync(string username);
     }
 }

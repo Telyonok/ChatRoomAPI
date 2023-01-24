@@ -26,11 +26,11 @@ namespace ChatRoomWeb.Services
 
         public async Task<TokenResponse> RefreshTokenAsync(RefreshTokenRequest refreshTokenRequest)
         {
-            // validate refresh token
+            //validate refresh token
             var isValid = ValidateRefreshToken(refreshTokenRequest);
             if (isValid) 
             {
-                var user = await _usersService.GetUserFromRefreshTokenAsync(refreshTokenRequest.Email, refreshTokenRequest.RefreshToken);
+                var user = await _usersService.GetUserFromRefreshTokenAsync(refreshTokenRequest.RefreshToken);
                 if (user != null) 
                 {
                     return CreateToken(user);
@@ -46,8 +46,7 @@ namespace ChatRoomWeb.Services
 
         private bool ValidateRefreshToken(RefreshTokenRequest refreshTokenRequest)
         {
-            // 
-            var storedToken = _tokenRepository.GetToken(refreshTokenRequest.Email, refreshTokenRequest.RefreshToken);
+            var storedToken = _tokenRepository.GetToken(refreshTokenRequest.RefreshToken);
             if (storedToken != null) 
             {
                 if (storedToken.RefreshExpirationDate < DateTime.Now)
@@ -93,7 +92,7 @@ namespace ChatRoomWeb.Services
                 issuer: "localhost:7158",
                 audience: "localhost:7158",
                 claims: claim,
-                expires: DateTime.Now.AddSeconds(20),
+                expires: DateTime.Now.AddMinutes(10),
                 signingCredentials: creds
                 );
 

@@ -9,11 +9,11 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ChatRoomAPI
 build_property.RootNamespace = ChatRoomAPI
-build_property.ProjectDir = C:\Users\life2\Source\Repos\ChatRoomAPIGit\ChatRoomAPI\
+build_property.ProjectDir = C:\Users\life2\source\repos\ChatRoomAPIGit\ChatRoomAPI\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\life2\Source\Repos\ChatRoomAPIGit\ChatRoomAPI
+build_property.MSBuildProjectDirectory = C:\Users\life2\source\repos\ChatRoomAPIGit\ChatRoomAPI
 build_property._RazorSourceGeneratorDebug = 
 
 [C:/Users/life2/Source/Repos/ChatRoomAPIGit/ChatRoomAPI/Views/Home/Index.cshtml]

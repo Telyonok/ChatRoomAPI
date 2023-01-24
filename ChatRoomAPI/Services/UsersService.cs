@@ -1,6 +1,7 @@
 ﻿using ChatRoomAPI.Data;
 using ChatRoomAPI.Models;
 using ChatRoomAPI.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
 using Serilog;
 using System.Security.Authentication;
@@ -22,6 +23,15 @@ namespace ChatRoomAPI.Services
 
         public async Task InsertUserAsync(User user)
         {
+            if (!IsUniqueEmailAsync(user.Email).Result)
+            {
+                throw new AuthenticationException("Email is already taken");
+            }
+            if (IsUniqueUsernameAsync(user.Username).Result)
+            {
+                throw new AuthenticationException("Username is already taken");
+            }
+
             var userId = await _usersRepository.InsertUserAsync(user);
             // send email
             var validationData = Guid.NewGuid();
@@ -46,26 +56,42 @@ namespace ChatRoomAPI.Services
             return user;
         }
 
-        public async Task<User> GetUserFromRefreshTokenAsync(string email, string refreshToken)
+        public async Task<User> GetUserFromRefreshTokenAsync(string refreshToken)
         {
+            var token = _tokenRepository.GetToken(refreshToken);
+            
+            if (token == null)
+            {
+                return null;
+            }
+
+            var email = token.UserEmail;
+
             var user = await _usersRepository.GetUserByEmailAsync(email);
             if (user == null)
             {
                 throw new AuthenticationException();
             }
-
-            if (_tokenRepository.GetToken(email, refreshToken) != null)
-            {
-                return user;
-            }
-
-            return null;
+            
+            return user;
         }
 
-        public async Task<int> GetUserIdByVerification(string verificationData)
+        public async Task<int> GetUserIdByVerificationAsync(string verificationData)
         {
-            var userId = await _usersRepository.GetUserIdByVerification(verificationData);
+            var userId = await _usersRepository.GetUserIdByVerificationAsync(verificationData);
             return userId;
+        }
+
+        public async Task<bool> IsUniqueEmailAsync(string email)
+        {
+            var userId = await _usersRepository.GetUserIdByEmailAsync(email);
+            return userId < 0;
+        }
+
+        public async Task<bool> IsUniqueUsernameAsync(string username)
+        {
+            var userId = await _usersRepository.GetUserIdByUsernameAsync(username);
+            return userId < 0;
         }
     }
 }

@@ -37,7 +37,7 @@ namespace ChatRoomAPI.Migrations
                     b.Property<DateTime>("RefreshExpirationDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("RefreshToken")
+                    b.Property<string>("RefreshTokenAsync")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
